@@ -1,0 +1,256 @@
+body {
+  color: #333;
+  background-color: #001;
+  font-family: Spectral, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.slide {
+  cursor: move; 
+  cursor: -webkit-grab; /* Chrome 1-21, Safari 4+ */
+  cursor:    -moz-grab; /* Firefox 1.5-26 */
+  cursor:         grab; /* W3C standards syntax, should come least */
+}
+.slide:active {
+  cursor: -webkit-grabbing;
+  cursor:    -moz-grabbing;
+  cursor:         grabbing;
+}
+.hidden{
+  visibility: hidden;
+}
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.slide {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: move;
+  will-change: transform;
+  background-color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+.slide.slide-1 {
+  background-color: #fff6e4;
+}
+
+.slide.slide-4 {
+  background-color: #fbfff5;
+}
+
+.slide.slide-3 {
+  background-color: #f8fffb;
+}
+
+.slide.slide-2 {
+  background-color: #ffede3;
+}
+
+.slide_container {
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  place-items: stretch stretch;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.slide_container.is--reverse {
+  flex-flow: row-reverse;
+}
+
+.slide_image {
+  object-fit: cover;
+  will-change: transform;
+  width: 100%;
+  height: 100%;
+}
+
+.slide_image-wrapper {
+  flex: 1 0 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide_content-wrapper {
+  text-align: center;
+  flex-flow: column;
+  flex: 1 0 0;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.slide_content-image {
+  aspect-ratio: 1;
+  object-fit: cover;
+  will-change: transform;
+  width: 7.5rem;
+}
+
+.slide_content-heading {
+  letter-spacing: -.2rem;
+  will-change: transform;
+  font-size: 3.75vw;
+  font-weight: 200;
+  line-height: 1em;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.slide_content-text {
+  letter-spacing: -.09rem;
+  text-transform: uppercase;
+  will-change: transform;
+  font-size: 1.5vw;
+  line-height: 1.2em;
+}
+
+.slide_content {
+  flex-flow: column;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem 4rem;
+  display: flex;
+  position: relative;
+}
+
+.slideshow {
+  height: 100vh;
+  position: relative;
+}
+
+.code_css {
+  display: none;
+}
+
+.button_reference {
+  z-index: 20;
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: #252525;
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: .25rem;
+  justify-content: flex-start;
+  align-items: baseline;
+  padding: .5rem .75rem;
+  font-family: Inconsolata, monospace;
+  font-size: .8rem;
+  line-height: 1em;
+  text-decoration: none;
+  display: flex;
+}
+
+.button_reference.fix-top-right {
+  position: fixed;
+  top: .5rem;
+  right: .5rem;
+}
+
+.button_reference.fix-bottom-left {
+  position: fixed;
+  bottom: .5rem;
+  left: .5rem;
+}
+
+.code_js {
+  display: none;
+}
+
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('../fonts/Spectral-ExtraBold.ttf') format('truetype'), url('../fonts/Spectral-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spectral';
+  src: url('../fonts/Spectral-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spectral';
+  src: url('../fonts/Spectral-BoldItalic.ttf') format('truetype'), url('../fonts/Spectral-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spectral';
+  src: url('../fonts/Spectral-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spectral';
+  src: url('../fonts/Spectral-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spectral';
+  src: url('../fonts/Spectral-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spectral';
+  src: url('../fonts/Spectral-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spectral';
+  src: url('../fonts/Spectral-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spectral';
+  src: url('../fonts/Spectral-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spectral';
+  src: url('../fonts/Spectral-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spectral';
+  src: url('../fonts/Spectral-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spectral';
+  src: url('../fonts/Spectral-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
